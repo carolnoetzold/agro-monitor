@@ -1,0 +1,33 @@
+{
+  "host": "localhost",
+  "port": 3030,
+  "public": "../public/",
+  "paginate": {
+    "default": 10,
+    "max": 50
+  },
+  "mongodb": "mongodb://carolnoetzold:aPQggQFG0LDex0wF@agromonitor-shard-00-00-adfh2.mongodb.net:27017,agromonitor-shard-00-01-adfh2.mongodb.net:27017,agromonitor-shard-00-02-adfh2.mongodb.net:27017/tcc?ssl=true&replicaSet=agromonitor-shard-0&authSource=admin",  "authentication": {
+    "secret": "1b70d0495a7852dcd549edf0ab845d3e81196b54e2cfd1219089917ddc2127c35e48c1442cc061db813225ae43bbf854543bfda5c89046da2931c23b56e5bc3948efa74affb06122b223fcea7b2d04ba3c43363d2b87521f73a860d2cda68556bb2156dd309782f07249fd144e0a4d58eae5244693c3ef3206a56a55835fa71f102232693db637f6a37febe0b9bddbd7f628d93fbb4d41f369aad5c6a1d8436b17aba47a2d59de1e788b2db057a2fd18df32d3a5f19cc7cb6961bd2c67196f2f53d05e35caabc723f14f545e28ebe5ea0599a0c52c703c77579a5aa3c44847ef036b20dee0c51c82a11c085624cf86d6791bc744ba4e16e705320a832dc4b7ff",
+    "strategies": [
+      "jwt",
+      "local"
+    ],
+    "path": "/authentication",
+    "service": "users",
+    "jwt": {
+      "header": {
+        "typ": "access"
+      },
+      "audience": "https://yourdomain.com",
+      "subject": "anonymous",
+      "issuer": "feathers",
+      "algorithm": "HS256",
+      "expiresIn": "1000d"
+    },
+    "local": {
+      "entity": "user",
+      "usernameField": "email",
+      "passwordField": "password"
+    }
+  }
+}
