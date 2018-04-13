@@ -1,4 +1,4 @@
-package com.tccreact;
+package com.frontend;
 
 import android.app.Application;
 
