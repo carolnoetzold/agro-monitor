@@ -1,10 +1,10 @@
 import React from 'react'
 import { Text } from 'react-native'
 
-export default class Feed extends React.Component {
+export default class Opcoes extends React.Component {
     render() {
         return (
-            <Text>Feed</Text>
+            <Text>Opções</Text>
         );
     }
 }
